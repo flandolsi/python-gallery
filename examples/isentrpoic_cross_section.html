@@ -1,0 +1,504 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Isentropic Cross-section &mdash; Unidata Python Gallery</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Useful Python Tools" href="../useful_tools.html" />
+    <link rel="prev" title="Miller Composite Chart" href="miller_composite.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Unidata Python Gallery
+          
+
+          
+            
+            <img src="../_static/Unidata_logo_vertical_400x400_alpha.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Unidata Python Gallery</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="xarray_500hPa_map.html">Using Xarray for Data read and selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Precipitation_Map.html">NWS Precipitation Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Satellite_Example.html">WV Satellite Overlay Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GFS_Widget.html">Jupyter Notebook Widget Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Smoothing_Contours.html">Smoothing Contours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="250hPa_Hemispheric_Plot.html">A 250-hPa Hemispheric Map using Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Isentropic_Interpolation.html">Isentropic Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GOES_aircraft.html">GOES Aircraft Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="500hPa_Vorticity_Advection.html">500 hPa Vorticity Advection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MSLP_temp_winds.html">Model Surface Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ageostrophic_Wind_Example.html">Geostrophic and Ageostrophic Wind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Wind_Shear_Vectors_Example.html">Calculating Wind Shear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="850hPa_Temperature_Advection.html">850 hPa Temperature Advection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HILO_Symbol_Plot.html">MSLP and 1000-500 hPa Thickness with High and Low Symbols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sounding_Plotter.html">Sounding Plotter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="miller_composite.html">Miller Composite Chart</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Isentropic Cross-section</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../useful_tools.html">Useful Python Tools</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Unidata Python Gallery</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Unidata Python Gallery</a> &raquo;</li>
+        
+      <li>Isentropic Cross-section</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/examples/isentrpoic_cross_section.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Click <a class="reference internal" href="#sphx-glr-download-examples-isentrpoic-cross-section-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="isentropic-cross-section">
+<span id="sphx-glr-examples-isentrpoic-cross-section-py"></span><h1>Isentropic Cross-section<a class="headerlink" href="#isentropic-cross-section" title="Permalink to this headline">¶</a></h1>
+<p>Make an isentropic cross section with MetPy</p>
+<p>With the function <cite>metpy.calc.extract_cross_section</cite>, data can be extracted from 3-dimensional
+input along a specified line and plotted in a 2-dimensional cross-section.</p>
+<img alt="../_images/cross_section.gif" src="../_images/cross_section.gif" />
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="kn">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="kn">as</span> <span class="nn">cfeature</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="kn">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact_manual</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">metpy.calc</span> <span class="kn">as</span> <span class="nn">mcalc</span>
+<span class="kn">from</span> <span class="nn">metpy.units</span> <span class="kn">import</span> <span class="n">units</span>
+<span class="kn">from</span> <span class="nn">netCDF4</span> <span class="kn">import</span> <span class="n">num2date</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">siphon.ncss</span> <span class="kn">import</span> <span class="n">NCSS</span>
+</pre></div>
+</div>
+<p><strong>Getting the data</strong></p>
+<p>In this example, NARR reanalysis data for 18 UTC 04 April 1987 from the National Centers
+for Environmental Information (<a class="reference external" href="https://nomads.ncdc.noaa.gov">https://nomads.ncdc.noaa.gov</a>) will be used.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Link to NetCDF subset service for NAM analysis data</span>
+<span class="n">ncss</span> <span class="o">=</span> <span class="n">NCSS</span><span class="p">(</span><span class="s1">&#39;https://nomads.ncdc.noaa.gov/thredds/ncss/grid/narr-a/198704/19870404/&#39;</span>
+            <span class="s1">&#39;narr-a_221_19870404_1800_000.grb&#39;</span><span class="p">)</span>
+
+<span class="c1"># Bring in needed data</span>
+<span class="n">modeldata</span> <span class="o">=</span> <span class="n">ncss</span><span class="o">.</span><span class="n">query</span><span class="p">()</span><span class="o">.</span><span class="n">all_times</span><span class="p">()</span>
+<span class="n">modeldata</span><span class="o">.</span><span class="n">variables</span><span class="p">(</span><span class="s1">&#39;Geopotential_height&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;u_wind&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;v_wind&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;Temperature&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;Specific_humidity&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">add_lonlat</span><span class="p">()</span>
+<span class="c1"># Set the lat/lon box for the data you want to pull in.</span>
+<span class="c1"># lonlat_box(north_lat,south_lat,east_lon,west_lon)</span>
+<span class="n">modeldata</span><span class="o">.</span><span class="n">lonlat_box</span><span class="p">(</span><span class="o">-</span><span class="mi">140</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+
+<span class="c1"># Actually getting the data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">ncss</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">modeldata</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">))</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;v_wind&#39;, &#39;time&#39;, &#39;isobaric&#39;, &#39;y&#39;, &#39;x&#39;, &#39;Lambert_Conformal&#39;, &#39;lat&#39;, &#39;lon&#39;, &#39;Temperature&#39;, &#39;Geopotential_height&#39;, &#39;Specific_humidity&#39;, &#39;u_wind&#39;]
+</pre></div>
+</div>
+<p>We will reduce the dimensionality of the data as it is pulled in to remove an empty time
+dimension. Additionally, units are required for input data, so the proper units will also
+be attached.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign data to variable names</span>
+<span class="n">dtime</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;Geopotential_height&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">dlev</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;Geopotential_height&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">lat</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">][:]</span>
+<span class="n">lon</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">][:]</span>
+<span class="n">lev</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="n">dlev</span><span class="p">][:]</span> <span class="o">*</span> <span class="n">units</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="n">dlev</span><span class="p">]</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+<span class="n">times</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="n">dtime</span><span class="p">]</span>
+<span class="n">vtimes</span> <span class="o">=</span> <span class="n">num2date</span><span class="p">(</span><span class="n">times</span><span class="p">[:],</span> <span class="n">times</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+
+<span class="n">temps</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;Temperature&#39;</span><span class="p">]</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">temps</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">kelvin</span>
+<span class="n">uwnd</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;u_wind&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">*</span> <span class="n">units</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;u_wind&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+<span class="n">vwnd</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;v_wind&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">*</span> <span class="n">units</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;v_wind&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+<span class="n">hgt</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;Geopotential_height&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">meter</span>
+<span class="n">spech</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;Specific_humidity&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">*</span>
+         <span class="n">units</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;Specific_humidity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">units</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Create the coordinate system and projection for plotting the inset map</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">crs</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">LambertConformal</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=-</span><span class="mf">100.0</span><span class="p">,</span> <span class="n">central_latitude</span><span class="o">=</span><span class="mf">45.0</span><span class="p">)</span>
+<span class="n">tlatlons</span> <span class="o">=</span> <span class="n">crs</span><span class="o">.</span><span class="n">transform_points</span><span class="p">(</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
+<span class="n">tlons</span> <span class="o">=</span> <span class="n">tlatlons</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">tlats</span> <span class="o">=</span> <span class="n">tlatlons</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Get data to plot state and province boundaries</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">states_provinces</span> <span class="o">=</span> <span class="n">cfeature</span><span class="o">.</span><span class="n">NaturalEarthFeature</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s1">&#39;cultural&#39;</span><span class="p">,</span>
+                                                <span class="n">name</span><span class="o">=</span><span class="s1">&#39;admin_1_states_provinces_lakes&#39;</span><span class="p">,</span>
+                                                <span class="n">scale</span><span class="o">=</span><span class="s1">&#39;50m&#39;</span><span class="p">,</span>
+                                                <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Define a 2-D lat/lon index function to find the nearest grid point to a specified coordinate</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lat_lon_2d_index</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lon1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculate the index values of the grid point nearest a given lat/lon point.</span>
+
+<span class="sd">    This function calculates the distance from a desired lat/lon point</span>
+<span class="sd">    to each element of a 2D array of lat/lon values, typically from model output,</span>
+<span class="sd">    and determines the index value corresponding to the nearest lat/lon grid point.</span>
+
+<span class="sd">    y = latitude array</span>
+<span class="sd">    x = longitude array</span>
+<span class="sd">    lon1 = longitude point (signle value)</span>
+<span class="sd">    lat1 = latitude point (single value)</span>
+
+<span class="sd">    Returns the index value for nearest lat/lon point on grid</span>
+
+<span class="sd">    Equations for variable distiance between longitudes from</span>
+<span class="sd">    http://andrew.hedges.name/experiments/haversine/, code by Kevin Goebbert.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="mf">6373.</span> <span class="o">*</span> <span class="mf">1000.</span>  <span class="c1"># Earth&#39;s Radius in meters</span>
+    <span class="n">rad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">180.</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">*</span> <span class="n">lon1</span>
+    <span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">*</span> <span class="n">lat1</span>
+    <span class="n">dlon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x1</span><span class="p">)</span>
+    <span class="n">dlat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">y1</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">rad</span> <span class="o">*</span> <span class="n">dlat</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">rad</span> <span class="o">*</span> <span class="n">y1</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">rad</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span> <span class="o">*</span>
+                                        <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">rad</span> <span class="o">*</span> <span class="n">dlon</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">a</span><span class="p">))</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">c</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">argmin</span><span class="p">(),</span> <span class="n">d</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Insentropic Cross Section</strong></p>
+<p>With the projection set up, we will define the endpoints, extract the
+cross-sectional data, and plot with an inset map.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cross_section</span><span class="p">(</span><span class="n">isentlev</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">left_lat</span><span class="p">,</span> <span class="n">left_lon</span><span class="p">,</span> <span class="n">right_lat</span><span class="p">,</span> <span class="n">right_lon</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Plot an isentropic cross-section.&quot;&quot;&quot;</span>
+    <span class="c1"># get the coordinates of the endpoints for the cross-section</span>
+    <span class="n">left_coord</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="nb">float</span><span class="p">(</span><span class="n">left_lat</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">left_lon</span><span class="p">)))</span>
+    <span class="n">right_coord</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="nb">float</span><span class="p">(</span><span class="n">right_lat</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">right_lon</span><span class="p">)))</span>
+
+    <span class="c1"># Calculate data for the inset isentropic map</span>
+    <span class="n">isent_anal</span> <span class="o">=</span> <span class="n">mcalc</span><span class="o">.</span><span class="n">isentropic_interpolation</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">isentlev</span><span class="p">)</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">kelvin</span><span class="p">,</span> <span class="n">lev</span><span class="p">,</span> <span class="n">tmp</span><span class="p">,</span>
+                                                <span class="n">spech</span><span class="p">,</span> <span class="n">tmpk_out</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">isentprs</span> <span class="o">=</span> <span class="n">isent_anal</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">isenttmp</span> <span class="o">=</span> <span class="n">isent_anal</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">isentspech</span> <span class="o">=</span> <span class="n">isent_anal</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">isentrh</span> <span class="o">=</span> <span class="n">mcalc</span><span class="o">.</span><span class="n">relative_humidity_from_specific_humidity</span><span class="p">(</span><span class="n">isentspech</span><span class="p">,</span> <span class="n">isenttmp</span><span class="p">,</span> <span class="n">isentprs</span><span class="p">)</span>
+
+    <span class="c1"># Find index values for the cross section slice</span>
+    <span class="n">iright</span> <span class="o">=</span> <span class="n">lat_lon_2d_index</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">right_coord</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">right_coord</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">ileft</span> <span class="o">=</span> <span class="n">lat_lon_2d_index</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">left_coord</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">left_coord</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="c1"># Get the cross-section slice data</span>
+    <span class="n">cross_data</span> <span class="o">=</span> <span class="n">mcalc</span><span class="o">.</span><span class="n">extract_cross_section</span><span class="p">(</span><span class="n">ileft</span><span class="p">,</span> <span class="n">iright</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">tmp</span><span class="p">,</span> <span class="n">uwnd</span><span class="p">,</span> <span class="n">vwnd</span><span class="p">,</span> <span class="n">spech</span><span class="p">,</span>
+                                             <span class="n">num</span><span class="o">=</span><span class="n">num</span><span class="p">)</span>
+    <span class="n">cross_lat</span> <span class="o">=</span> <span class="n">cross_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">cross_lon</span> <span class="o">=</span> <span class="n">cross_data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">cross_t</span> <span class="o">=</span> <span class="n">cross_data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">cross_u</span> <span class="o">=</span> <span class="n">cross_data</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">cross_v</span> <span class="o">=</span> <span class="n">cross_data</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">cross_spech</span> <span class="o">=</span> <span class="n">cross_data</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+
+    <span class="c1"># Calculate theta and RH on the cross-section</span>
+    <span class="n">cross_theta</span> <span class="o">=</span> <span class="n">mcalc</span><span class="o">.</span><span class="n">potential_temperature</span><span class="p">(</span><span class="n">lev</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">],</span> <span class="n">cross_t</span><span class="p">)</span>
+    <span class="n">cross_rh</span> <span class="o">=</span> <span class="n">mcalc</span><span class="o">.</span><span class="n">relative_humidity_from_specific_humidity</span><span class="p">(</span><span class="n">cross_spech</span><span class="p">,</span> <span class="n">cross_t</span><span class="p">,</span>
+                                                              <span class="n">lev</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">])</span>
+
+    <span class="c1"># Create figure for ploting</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">17.</span><span class="p">,</span> <span class="mf">12.</span><span class="p">))</span>
+
+    <span class="c1"># Plot the cross section</span>
+    <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">()</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;symlog&#39;</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="n">cint</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+    <span class="c1"># Determine whether to label x-axis with lat or lon values</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">left_lon</span> <span class="o">-</span> <span class="n">right_lon</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">left_lat</span> <span class="o">-</span> <span class="n">right_lat</span><span class="p">):</span>
+        <span class="n">cs</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">cross_lon</span><span class="p">,</span> <span class="n">lev</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">cross_theta</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:],</span> <span class="n">cint</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;tab:red&#39;</span><span class="p">)</span>
+        <span class="n">cf</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">cross_lon</span><span class="p">,</span> <span class="n">lev</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">cross_rh</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:],</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                          <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gist_earth_r</span><span class="p">)</span>
+        <span class="n">ax1</span><span class="o">.</span><span class="n">barbs</span><span class="p">(</span><span class="n">cross_lon</span><span class="p">[</span><span class="mi">4</span><span class="p">::</span><span class="mi">4</span><span class="p">],</span> <span class="n">lev</span><span class="p">,</span> <span class="n">cross_u</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">::</span><span class="mi">4</span><span class="p">],</span> <span class="n">cross_v</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">::</span><span class="mi">4</span><span class="p">],</span> <span class="n">length</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Longitude (Degrees East)&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">cs</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">cross_lat</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lev</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">cross_theta</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">cint</span><span class="p">,</span>
+                         <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;tab:red&#39;</span><span class="p">)</span>
+        <span class="n">cf</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">cross_lat</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lev</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">cross_rh</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                          <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gist_earth_r</span><span class="p">)</span>
+        <span class="n">ax1</span><span class="o">.</span><span class="n">barbs</span><span class="p">(</span><span class="n">cross_lat</span><span class="p">[::</span><span class="o">-</span><span class="mi">4</span><span class="p">],</span> <span class="n">lev</span><span class="p">,</span> <span class="n">cross_u</span><span class="p">[:,</span> <span class="p">::</span><span class="o">-</span><span class="mi">4</span><span class="p">],</span> <span class="n">cross_v</span><span class="p">[:,</span> <span class="p">::</span><span class="o">-</span><span class="mi">4</span><span class="p">],</span> <span class="n">length</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">cross_lat</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cross_lat</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Latitude (Degrees North)&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Label the cross section axes</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">inline</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inline_spacing</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+               <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%i</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">rightside_up</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">use_clabeltext</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">cb</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cf</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">extend</span><span class="o">=</span><span class="nb">max</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">65</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span>
+                      <span class="n">pad</span><span class="o">=</span><span class="mf">0.06</span><span class="p">,</span> <span class="n">extendrect</span><span class="o">=</span><span class="s1">&#39;True&#39;</span><span class="p">)</span>
+    <span class="n">cb</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;Relative Humidity&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s1">&#39;x-large&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Pressure (hPa)&#39;</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="o">-</span><span class="mi">50</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="n">lev</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lev</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="o">-</span><span class="mi">50</span><span class="p">))</span>
+
+    <span class="c1"># Add a title</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">((</span><span class="s1">&#39;NARR Isentropic Cross-Section: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">left_coord</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; N, &#39;</span> <span class="o">+</span>
+               <span class="nb">str</span><span class="p">(</span><span class="n">left_coord</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; E  to &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">right_coord</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; N, &#39;</span> <span class="o">+</span>
+               <span class="nb">str</span><span class="p">(</span><span class="n">right_coord</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; E&#39;</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;VALID: {:s}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">vtimes</span><span class="p">[</span><span class="mi">0</span><span class="p">])),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Add Inset Map</span>
+    <span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.125</span><span class="p">,</span> <span class="mf">0.643</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">],</span> <span class="n">projection</span><span class="o">=</span><span class="n">crs</span><span class="p">)</span>
+
+    <span class="c1"># Coordinates to limit map area</span>
+    <span class="n">bounds</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="mf">122.</span><span class="p">,</span> <span class="o">-</span><span class="mf">75.</span><span class="p">,</span> <span class="mf">25.</span><span class="p">,</span> <span class="mf">50.</span><span class="p">)]</span>
+
+    <span class="c1"># Limit extent of inset map</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_extent</span><span class="p">(</span><span class="o">*</span><span class="n">bounds</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="s1">&#39;50m&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">states_provinces</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+    <span class="c1"># Plot the surface</span>
+    <span class="n">clevisent</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+    <span class="n">cs</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">tlons</span><span class="p">,</span> <span class="n">tlats</span><span class="p">,</span> <span class="n">isentprs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:],</span> <span class="n">clevisent</span><span class="p">,</span>
+                     <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">inline</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inline_spacing</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+               <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%i</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">rightside_up</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">use_clabeltext</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="c1"># Plot RH</span>
+    <span class="n">cf</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">tlons</span><span class="p">,</span> <span class="n">tlats</span><span class="p">,</span> <span class="n">isentrh</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:],</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                      <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gist_earth_r</span><span class="p">)</span>
+
+    <span class="c1"># Convert endpoints of cross-section line</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="n">crs</span><span class="o">.</span><span class="n">transform_point</span><span class="p">(</span><span class="n">left_coord</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">left_coord</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">crs</span><span class="o">.</span><span class="n">transform_point</span><span class="p">(</span><span class="n">right_coord</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">right_coord</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+
+    <span class="c1"># Plot the cross section line</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">left</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">right</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">left</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">right</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="c1"># Finally, call the plotting function and show the map interactively</span>
+<span class="n">interact_manual</span><span class="p">(</span><span class="n">cross_section</span><span class="p">,</span>
+                <span class="n">isentlev</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">280</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">330</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">296</span><span class="p">,</span>
+                                           <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Isentropic Level&#39;</span><span class="p">),</span>
+                <span class="n">num</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+                                      <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Sampling Points&#39;</span><span class="p">),</span>
+                <span class="n">left_lat</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">90.</span><span class="p">,</span> <span class="n">step</span><span class="o">=.</span><span class="mi">5</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mf">37.</span><span class="p">,</span>
+                                             <span class="n">description</span><span class="o">=</span><span class="s1">&#39;West Lat (N)&#39;</span><span class="p">),</span>
+                <span class="n">left_lon</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=-</span><span class="mi">150</span><span class="p">,</span> <span class="nb">max</span><span class="o">=-</span><span class="mi">45</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">value</span><span class="o">=-</span><span class="mf">105.</span><span class="p">,</span>
+                                             <span class="n">description</span><span class="o">=</span><span class="s1">&#39;West Lon (E)&#39;</span><span class="p">),</span>
+                <span class="n">right_lat</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">90.</span><span class="p">,</span> <span class="n">step</span><span class="o">=.</span><span class="mi">5</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mf">35.5</span><span class="p">,</span>
+                                              <span class="n">description</span><span class="o">=</span><span class="s1">&#39;East Lat (N)&#39;</span><span class="p">),</span>
+                <span class="n">right_lon</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=-</span><span class="mi">150</span><span class="p">,</span> <span class="nb">max</span><span class="o">=-</span><span class="mi">45</span><span class="p">,</span> <span class="n">step</span><span class="o">=.</span><span class="mi">5</span><span class="p">,</span> <span class="n">value</span><span class="o">=-</span><span class="mf">65.</span><span class="p">,</span>
+                                              <span class="n">description</span><span class="o">=</span><span class="s1">&#39;East Lon (E)&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>interactive(children=(IntSlider(value=296, description=&#39;Isentropic Level&#39;, max=330, min=280), IntSlider(value=80, description=&#39;Sampling Points&#39;, max=500, min=20, step=10), FloatSlider(value=37.0, description=&#39;West Lat (N)&#39;, max=90.0, step=0.5), FloatSlider(value=-105.0, description=&#39;West Lon (E)&#39;, max=-45.0, min=-150.0, step=0.5), FloatSlider(value=35.5, description=&#39;East Lat (N)&#39;, max=90.0, step=0.5), FloatSlider(value=-65.0, description=&#39;East Lon (E)&#39;, max=-45.0, min=-150.0, step=0.5), Button(description=&#39;Run Interact&#39;, style=ButtonStyle()), Output()), _dom_classes=(&#39;widget-interact&#39;,))
+</pre></div>
+</div>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  3.677 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-isentrpoic-cross-section-py">
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" download="" href="../_downloads/aaa106da930aadc69d83b40b7eab0e82/isentrpoic_cross_section.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">isentrpoic_cross_section.py</span></code></a></div>
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" download="" href="../_downloads/34e64a7e094baa0b9508e074b6eb4567/isentrpoic_cross_section.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">isentrpoic_cross_section.ipynb</span></code></a></div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../useful_tools.html" class="btn btn-neutral float-right" title="Useful Python Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="miller_composite.html" class="btn btn-neutral" title="Miller Composite Chart" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, UCAR/Unidata
+      Last updated on Dec 25, 2018 at 16:18:20.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92978945-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<p>Do you find this gallery useful?
+  <a href="https://saythanks.io/to/unidata" class="btn btn-neutral" title="Installation Guide" accesskey="n">Say Thanks!</a>
+</p>
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
